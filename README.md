@@ -1,76 +1,52 @@
-Inventory & Logistics Analytics (SQL-Focused)
-Overview
+# Supply Chain & Inventory Analytics Platform
+This project analyzes supply chain, inventory, and logistics data to identify cost drivers, delivery bottlenecks, and inventory risks. 
+Using SQL for analytical querying, Python for data preparation, and Power BI for visualization, the project delivers actionable insights 
+to support inventory planning, supplier performance evaluation, and operational decision-making.
+## Business Problem
+Supply chain operations often suffer from delayed shipments, inefficient inventory turnover, and unreliable supplier performance.
+This project addresses these challenges by analyzing transactional and operational data to:
+- Detect delivery delays and lead-time bottlenecks
+- Identify slow- and fast-moving products
+- Forecast potential stock-out risks
+- Support data-driven restocking and inventory planning
+## Tools & Technologies
+- SQL (MySQL): Core analysis, aggregations, window functions, KPIs
+- Python: Data cleaning, preprocessing, and transformation
+- Power BI: Interactive dashboards and reporting
+## Dataset & Data Model
+- Source: Public Kaggle dataset adapted for analytical use
+- Data was restructured into a normalized relational schema
 
-This module applies advanced SQL analytics to evaluate inventory flow, supplier reliability, and delivery efficiency within a multi-product supply chain environment. The work focuses on transforming transactional data into operational insights that support planning, fulfillment optimization, and risk mitigation.
-
-Technology Stack
-
-MySQL – Primary platform for relational analysis and complex querying
-
-Python – Data preparation, normalization, and feature engineering
-
-Power BI – Visualization and exploratory reporting layer
-
-Analytical Objectives
-
-Classify products by movement velocity using historical demand
-
-Measure delivery delays and reliability across suppliers and regions
-
-Monitor inventory health through turnover and depletion indicators
-
-Evaluate supplier and product-level fulfillment effectiveness
-
-Provide data-backed signals to guide replenishment decisions
-
-Data Model
-
-Data Origin: Public Kaggle dataset adapted for analytical use
-
-Schema Design: Converted into a normalized relational structure
-
-Core Tables:
-
-orders
-
-products
-
-customers
-
-suppliers
-
-inventory
-
-shipments
-
-SQL Techniques Applied
-
-Analytical functions for ranking, sequencing, and rolling metrics
-
-Multi-layer CTE pipelines for modular query design
-
-Recursive queries for hierarchy and time-series expansion
-
-Subqueries for conditional and context-aware calculations
-
-Temporal functions to quantify shipping duration and delays
-
-Analytical Use Cases
-
-Supplier punctuality scoring based on shipment completion timelines
-
-Detection of underperforming SKUs by category over recent demand windows
-
-Warehouse-level inventory turnover tracking on a monthly basis
-
-Early warning identification of potential stock depletion
-
-Rolling-period sales and return trend analysis
-
-Behavioral segmentation of high-risk customers (returns/cancellations)
-
-Rule-based replenishment logic driven by demand and inventory signals
-
-Outcome
-
-The SQL analysis layer enables operational teams to identify inefficiencies, anticipate supply risks, and improve inventory planning decisions using structured, query-driven insights.
+Main tables:
+- orders
+- products
+- customers
+- suppliers
+- inventory
+- shipments
+## Analytical Approach
+- Cleaned and prepared raw data using Python
+- Designed SQL queries to analyze sales, inventory, and shipment performance
+- Used window functions and CTEs to compute rolling metrics and rankings
+- Built logic to detect stock-out risks and delivery delays
+- Created Power BI dashboards to visualize KPIs and trends
+## SQL Concepts Used
+- Window Functions (ROW_NUMBER, RANK, LAG, LEAD, SUM OVER)
+- Common Table Expressions (CTEs)
+- Correlated and non-correlated subqueries
+- Nested aggregations
+- Date and time-based analysis for lead times and delays
+## Key Analyses Performed
+- Supplier on-time delivery performance analysis
+- Identification of slow-moving SKUs by category
+- Inventory turnover analysis at warehouse level
+- Stock-out risk detection based on recent demand trends
+- Rolling sales and returns analysis
+- Supplier and product fulfillment ranking
+- Restocking recommendation logic based on inventory signals
+## Dashboard
+Power BI dashboards were built to visualize:
+- Sales and revenue trends
+- Inventory health and turnover
+- Supplier delivery performance
+- High-risk products and stock-out alerts
